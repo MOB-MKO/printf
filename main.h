@@ -69,18 +69,6 @@ int _puts(char *str);
 int print_rot13(va_list l, flags_t *f);
 int print_rev(va_list l, flags_t *f);
 int print_bigS(va_list l, flags_t *f);
-int printf_pointer(va_list val);
-int printf_exclusive_string(va_list val);
-int printf_unsigned(va_list args);
-int printf_bin(va_list val);
-int printf_srev(va_list args);
-int printf_char(va_list val);
-int printf_string(va_list val);
-int _strlen(char *s);
-int *_strcpy(char *dest, char *src);
-int _strlenc(const char *s);
-int rev_string(char *s);
-int _strlenc(const char *s);
 
 /* print_address */
 int print_address(va_list l, flags_t *f);
