@@ -60,6 +60,8 @@ int get_flag(char s, flags_t *f);
 /* print_alpha */
 int print_string(va_list l, flags_t *f);
 int print_char(va_list l, flags_t *f);
+int print_rot(va_list);
+int print_rev_string(va_list);
 
 /* write_funcs */
 int _putchar(char c);
@@ -75,5 +77,30 @@ int print_address(va_list l, flags_t *f);
 
 /* print_percent */
 int print_percent(va_list l, flags_t *f);
+
+/* utils.c */
+int _strlen(const char *);
+int print(char *);
+char *itoa(long int, int);
+
+/* handler.c */
+int handler(const char *, va_list);
+int percent_handler(const char *, va_list, int *);
+
+/* _putchar.c */
+int _putchar(char);
+int buffer(char);
+
+/**
+ *  * struct _format - Typedef struct
+ *   *
+ *    * @type: Format
+ *     * @f: The function associated
+ *      **/
+typedef struct _format
+{
+		char type;
+			int (*f)(va_list);
+} format;
 
 #endif
